@@ -1,0 +1,23 @@
+.custom-table {
+    background-color: #f0f0f0; 
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    color: #333; 
+  }
+  
+  .custom-table th {
+    background-color: #D3F4FB; 
+    color: black;
+  }  
+
+  .table-container {
+    margin: 0 auto; 
+    padding: 20px; 
+  }
+
+  .open-sans-header {
+    font-family: 'Open Sans', sans-serif;
+  }  
+  

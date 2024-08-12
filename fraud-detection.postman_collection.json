@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "0acd2842-65f5-45b9-8644-bf00c9cc796e",
+		"name": "fraud-detection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16511509"
+	},
+	"item": [
+		{
+			"name": "store_input_data valid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NIC\": \"409230746v\",\r\n    \"Bank account number\": 1641540114,\r\n    \"Credit card number\": \"0162 0240 0883 1593\",\r\n    \"Company name\": \"a\",\r\n    \"Company address\": \"a\",\r\n    \"Company contact\": \"a\",\r\n    \"Company registration\": \"a\",\r\n    \"Tender reference number\": \"a\",\r\n    \"Tender title\": \"a\",\r\n    \"Tender instructions\": \"a\",\r\n    \"Bidder name\": \"a\",\r\n    \"Bidder position\": \"a\",\r\n    \"Bidder contact\": \"a\",\r\n    \"Bid price\": \"a\",\r\n    \"References\": \"a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\",\r\n  \"user_type\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"example_user\",\r\n  \"password\": \"example_password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store_input_data invalid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NIC\": \"495371903v\",\r\n    \"Bank account number\": 1950986443,\r\n    \"Credit card number\": \"5932 5078 8106 8319\",\r\n    \"Company name\": \"Your Company Name\",\r\n    \"Company address\": \"Company Address\",\r\n    \"Company contact\": \"Company Contact Details\",\r\n    \"Company registration\": \"Company Registration Information\",\r\n    \"Tender reference number\": \"Tender Reference Number\",\r\n    \"Tender title\": \"Tender Title\",\r\n    \"Tender instructions\": \"Any specific instructions provided by the tendering organization\",\r\n    \"Bidder name\": \"Bidder Name\",\r\n    \"Bidder position\": \"Bidder Position/Title\",\r\n    \"Bidder contact\": \"Bidder Contact Details\",\r\n    \"Bid price\": \"Bid Price\",\r\n    \"References\": \"Contact information for references or testimonials from previous clients or projects\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "model_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/prediction_data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"prediction_data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
